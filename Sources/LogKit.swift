@@ -174,7 +174,7 @@ internal extension FileManager {
     ///                                necessary, before creating the file, if is does not exist.
     ///
     /// - throws: `NSError` with domain `NSURLErrorDomain`
-    internal func ensureFile(at URL: Foundation.URL, createDirectories: Bool = true) throws {
+    func ensureFile(at URL: Foundation.URL, createDirectories: Bool = true) throws {
         assert(URL.isFileURL, "URL must be a file system URL")
 
         let dirPath = URL.deletingLastPathComponent().path
@@ -209,7 +209,7 @@ internal extension Calendar {
 
     /// Returns whether the given date is the same date as "today".
     /// Exists as a compatibility shim for older operating systems.
-    internal func isDateSameAsToday(_ date: Date) -> Bool {
+    func isDateSameAsToday(_ date: Date) -> Bool {
         if #available(iOS 8.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
             return self.isDateInToday(date)
         }else{

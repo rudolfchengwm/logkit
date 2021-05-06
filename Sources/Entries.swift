@@ -101,7 +101,7 @@ public struct LXLogEntry {
 internal extension LXLogEntry {
 
     /// Returns the Log Entry as a dictionary.
-    internal func asMap() -> [String: AnyObject] {
+    func asMap() -> [String: AnyObject] {
         return [
             "logKitVersion": self.logKitVersion as AnyObject,
             "message": self.message as AnyObject,
