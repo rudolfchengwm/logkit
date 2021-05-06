@@ -96,7 +96,7 @@ open class LXEntryFormatter {
     ///                            converted Entry's string.
     ///
     /// - returns: A string representation of the Log Entry, based on the formatter's settings.
-    public func stringFromEntry(_ entry: LXLogEntry, appendNewline: Bool) -> String {
+    open func stringFromEntry(_ entry: LXLogEntry, appendNewline: Bool) -> String {
         return appendNewline ? entryFormatter(entry) + "\n" : entryFormatter(entry)
     }
 
